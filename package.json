@@ -1,0 +1,9 @@
+{
+    "name": "perfume-app-root",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "install-frontend": "npm install --prefix frontend",
+        "build": "cd frontend && npm install && CI=false npm run build && cd .. && rm -rf build && mv frontend/build build"
+    }
+}
