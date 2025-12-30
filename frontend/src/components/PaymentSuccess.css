@@ -1,0 +1,141 @@
+/* Professional Payment Success - Minimal Animations */
+
+.payment-success {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f9fafb;
+}
+
+.success-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #d1fae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 40px;
+}
+
+.success-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+.status-card {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+  border: 1px solid #e5e7eb;
+}
+
+.status-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.status-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.status-card p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.status-card.pending .status-icon {
+  color: #f59e0b;
+}
+
+.status-card.dispensing .status-icon {
+  color: #2563eb;
+}
+
+.status-card.completed .status-icon {
+  color: #10b981;
+}
+
+.status-card.failed .status-icon {
+  color: #ef4444;
+}
+
+.order-details {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.order-details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.order-detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.order-detail-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.order-detail-value {
+  color: #111827;
+  font-weight: 600;
+}
+
+.action-buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-buttons .btn {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .success-container {
+    padding: 24px;
+  }
+
+  .success-title {
+    font-size: 24px;
+  }
+}

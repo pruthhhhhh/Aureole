@@ -1,0 +1,594 @@
+/* Professional Admin Dashboard - Minimal Animations */
+
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 24px 0;
+  background: #f9fafb;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dashboard-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.dashboard-logo img {
+  max-width: 600px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.dashboard-header h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #6b7280;
+}
+
+.dashboard-header .header-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+/* Stat Card */
+.admin-dashboard .stat-card {
+  cursor: default;
+}
+
+/* Perfume Levels Grid - Enhanced Visual Design */
+.perfume-levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.perfume-level-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+.perfume-level-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--perfume-gradient, var(--perfume-color, #6366f1));
+}
+
+.perfume-level-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--perfume-color, #6366f1);
+}
+
+.perfume-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.perfume-card-number {
+  background: var(--perfume-color, #6366f1);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.perfume-card-info {
+  width: 100%;
+}
+
+.perfume-card-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.perfume-card-category {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  background: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.perfume-card-level-display {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.perfume-card-level-value {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--perfume-color, #111827);
+  letter-spacing: -0.5px;
+}
+
+.perfume-card-level-bar {
+  height: 10px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.perfume-card-level-fill {
+  height: 100%;
+  background: var(--perfume-gradient, var(--perfume-color, #10b981));
+  border-radius: 6px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.perfume-card-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.perfume-card-controls .btn {
+  padding: 6px 4px;
+  font-size: 11px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.perfume-card-controls .btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.perfume-card-controls .btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.perfume-card-controls .btn-primary {
+  background: var(--perfume-color, #6366f1);
+  color: white;
+}
+
+.perfume-card-controls .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.perfume-card-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px;
+  background: #fef2f2;
+  border-radius: 6px;
+  border: 1px solid #fecaca;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.perfume-card-warning.medium-warning {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.warning-text {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0 !important;
+}
+
+.perfume-card-warning.medium-warning .warning-text {
+  color: #d97706;
+}
+
+/* Machine Controls Grid */
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.control-group {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.control-group h4 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.status-controls,
+.dispense-controls,
+.communication-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-controls button,
+.communication-controls button {
+  flex: 1;
+  min-width: 80px;
+}
+
+.dispense-controls button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+.current-status-display {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.current-order-mini {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #ffc107;
+  text-align: center;
+  border: 1px dashed rgba(255, 193, 7, 0.3);
+}
+
+.pulsing-text {
+  color: #4caf50;
+  font-size: 0.8rem;
+  animation: pulse 1.5s infinite;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .perfume-levels-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .perfume-levels-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .perfume-card-level-value {
+    font-size: 28px;
+  }
+
+  .perfume-card-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .perfume-level-card {
+    padding: 16px;
+  }
+
+  .perfume-card-level-value {
+    font-size: 24px;
+  }
+}
+
+/* Responsive - Mobile and Tablet */
+@media (max-width: 1024px) {
+  .admin-dashboard {
+    padding: 16px 0;
+  }
+
+  .dashboard-logo img {
+    max-width: 100%;
+    max-height: 100px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    margin-bottom: 24px;
+  }
+
+  .dashboard-logo img {
+    max-width: 100%;
+    max-height: 80px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-header h2 {
+    font-size: 16px;
+  }
+
+  .dashboard-header .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .dashboard-header .header-actions button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .dashboard-logo img {
+    max-width: 450px;
+    max-height: 100px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .dashboard-logo img {
+    max-width: 550px;
+    max-height: 100px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .dashboard-logo img {
+    max-width: 100%;
+    max-height: 60px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  .dashboard-logo img {
+    max-width: 400px;
+    max-height: 70px;
+  }
+}
+
+/* Clear Orders Confirmation Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.clear-confirm-modal {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideInScale 0.3s ease-out;
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.clear-confirm-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.clear-confirm-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #dc2626;
+  margin: 0;
+}
+
+.clear-confirm-body {
+  margin-bottom: 24px;
+}
+
+.clear-confirm-body p {
+  margin-bottom: 12px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.warning-text {
+  color: #dc2626;
+  font-size: 16px;
+  margin-bottom: 16px !important;
+}
+
+.admin-info {
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 16px 0 !important;
+  color: #111827;
+}
+
+.confirm-instruction {
+  margin-top: 20px !important;
+  margin-bottom: 12px !important;
+  font-weight: 500;
+}
+
+.confirm-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.confirm-input:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.confirm-input::placeholder {
+  text-transform: none;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.clear-confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.clear-confirm-actions .btn {
+  min-width: 120px;
+}
+
+.clear-confirm-actions .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

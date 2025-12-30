@@ -1,0 +1,302 @@
+/* Actual Machine Component Styles */
+
+.actual-machine {
+  min-height: 100vh;
+  padding: 24px 0;
+  background: #f9fafb;
+}
+
+.machine-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.machine-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.machine-header p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.blynk-status-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.blynk-status-card.connected {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.blynk-status-card.disconnected {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.blynk-status-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+.blynk-status-card.connected .status-indicator {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.status-text {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.blynk-config {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.blynk-info {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.machine-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.machine-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.machine-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+/* Machine Perfume Levels Grid */
+.machine-perfume-levels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.machine-perfume-item {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-left: 4px solid;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.machine-perfume-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.machine-perfume-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.machine-perfume-number {
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.machine-perfume-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #111827;
+  flex: 1;
+}
+
+.machine-perfume-level-value {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.machine-perfume-progress-bar {
+  height: 20px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.machine-perfume-progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.machine-perfume-progress-fill.high {
+  background: #10b981;
+}
+
+.machine-perfume-progress-fill.medium {
+  background: #f59e0b;
+}
+
+.machine-perfume-progress-fill.low {
+  background: #ef4444;
+}
+
+.machine-perfume-controls {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.machine-perfume-controls .btn {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+.machine-perfume-controls .btn-sm {
+  min-width: auto;
+}
+
+.machine-perfume-warning {
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.status-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.current-status {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.current-order-info {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.current-order-info p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.dispense-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.dispensing-animation {
+  margin-top: 16px;
+  text-align: center;
+  padding: 12px;
+  background: #f0fdf4;
+  border-radius: 6px;
+}
+
+.pump-indicator {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.system-status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status-item .label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.status-item .value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .machine-perfume-levels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .machine-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
